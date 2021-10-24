@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <h2 class="w3-center">Slideshow Automatico</h2>
+    <div class="w3-content w3-section w3-center" style="max-width:500px">
+        <img class="slide" src="IMG/1921064562.jpg" style="width:100%">
+        <img class="slide" src="IMG/408960.jpg" style="width:100%">
+        <img class="slide" src="IMG/676807.jpg" style="width:100%">
+        <img class="slide" src="IMG/Screenshot_20201124-202548.png" style="width:100%">
+        <img class="slide" src="IMG/Screenshot_20201124.png" style="width:100%">
+        
+        <a href="https://www.alphacoders.com">Dsign By Leonardo / Alphacoders Img 1</a>
+        <br>
+        <a href="https://www.alphacoders.com">Dsign By Carlos / Alphacoders Img 1</a>
+        <br>
+        <a href="https://www.alphacoders.com">Dsign By Pedro / Alphacoders Img 1</a>
+        <br>
+        <a href="https://www.alphacoders.com">Dsign By Jainson / Alphacoders Img 1</a>
+        <br>
+        <a href="https://www.alphacoders.com">Dsign By Lucas / Alphacoders Img 1</a>
+        <br>
+    </div>
+    <script>
+        var index = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            for(i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            index++;
+            if(index > x.length) {index = 1}
+            x[index - 1].style.display = "block";
+            setTimeout(carousel, 2000); //Imagem é trocada a cada 2 segundos
+        }
+    </script>
+</body>
+</html>
